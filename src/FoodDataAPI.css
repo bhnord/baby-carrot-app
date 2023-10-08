@@ -9,11 +9,41 @@ form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
+/* .foodDataAPI {
 
-ul {
+} */
+.brand {
+    font-size: 20px;
+    margin-bottom: 15px
+}
+
+.foodDescription {
+    border-radius: 25px;
     background-color: rgb(255, 255, 255);
-    list-style: none;
+    padding: 5px;
     padding-left: 5%;
     padding-right: 5%;
-    background-clip: content-box;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    /* background-clip: content-box; */
+}
+
+input {
+    /* border-radius: 20px; */
+    padding: 5px;
+    border-radius: 20px;
+    border-width: 1px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: #2395df;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-width: 1px;
+    margin-left: 10px;
 }

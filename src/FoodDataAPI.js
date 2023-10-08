@@ -18,7 +18,7 @@ function FoodDataAPI(){
     
         // Validate the input
         if (!isValidNumber(searchTerm)) {
-            setError('Please enter a valid number.');
+            setError('Please enter a valid barcode.');
             return;
         }
   
@@ -54,11 +54,11 @@ function FoodDataAPI(){
 
       // Function to validate if the input is a valid number
     const isValidNumber = (input) => {
-        return !isNaN(input);
+        return !isNaN(input) && input.length == 12;
     };
     
       return (
-        <div className="FoodDataAPI">
+        <div className="foodDataAPI">
           <h1>Product Search</h1>
           <form onSubmit={handleSearch}>
             <input
@@ -77,20 +77,20 @@ function FoodDataAPI(){
           )}
 
           {submitted && results.length > 0 && (
-            <ul>
+            <div className='foodDescription'>
 
             <h3>Food Description</h3>
 
               {results.map((food) => (
-                <li key={food.fdcId}>
-                    <strong>Brand:</strong> {food.brandOwner}<br />
-                    <strong>Food Description:</strong> {food.description}<br />
+                <div key={food.fdcId}>
+                    <p className='brand'><strong>Brand:</strong> {food.brandOwner}</p>
+                    <strong>Food Description:</strong> {food.description}<br /><br />
                     <strong>Ingredients:</strong> {food.ingredients}<br />
-                </li>
+                </div>
               ))}
               <br></br>           
 
-            </ul>
+            </div>
           )}
 
         {submitted && Object.keys(openResults).length > 0 && (
@@ -98,7 +98,6 @@ function FoodDataAPI(){
           <h2>Open Food Facts Data</h2>
           <h3>Estimated CO2 Emission</h3>
 
-          <pre>{JSON.stringify(openResults, null, 2)}</pre>
             <strong>CO2 from Agriculture: </strong> {openResults.co2_agriculture} kg <br></br> 
             <strong>CO2 from Consumption: </strong> {openResults.co2_consumption} kg <br></br> 
             <strong>CO2 from Distribution: </strong> {openResults.co2_distribution} kg <br></br> 

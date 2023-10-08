@@ -1,5 +1,6 @@
 import logo from './baby_carrot_logo.png';
 import './App.css';
+import FoodDataAPI from './FoodDataAPI';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           EcoBite
         </p>
       </header>
+      <FoodDataAPI />
     </div>
   );
 }
