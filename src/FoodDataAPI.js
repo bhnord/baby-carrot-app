@@ -56,6 +56,8 @@ function FoodDataAPI(){
     const isValidNumber = (input) => {
         return !isNaN(input);
     };
+
+    const ecoscore = openResults.score;
     
       return (
         <div className="FoodDataAPI">
@@ -96,6 +98,7 @@ function FoodDataAPI(){
         {submitted && Object.keys(openResults).length > 0 && (
         <div>
           <h2>Open Food Facts Data</h2>
+          <h3>EcoScore: {ecoscore}/100</h3>
           <h3>Estimated CO2 Emission</h3>
 
           <pre>{JSON.stringify(openResults, null, 2)}</pre>
