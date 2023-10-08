@@ -46,4 +46,8 @@ button {
 
     border-width: 1px;
     margin-left: 10px;
+    
+}
+button:hover{
+    background-color: rgb(24, 107, 161);
 }

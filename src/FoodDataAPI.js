@@ -59,7 +59,7 @@ function FoodDataAPI(){
     
       return (
         <div className="foodDataAPI">
-          <h1>Product Search</h1>
+          <h2>Product Search</h2>
           <form onSubmit={handleSearch}>
             <input
               type="text"
@@ -84,7 +84,7 @@ function FoodDataAPI(){
               {results.map((food) => (
                 <div key={food.fdcId}>
                     <p className='brand'><strong>Brand:</strong> {food.brandOwner}</p>
-                    <strong>Food Description:</strong> {food.description}<br /><br />
+                    <strong>Food Description:</strong> {food.description}<br />
                     <strong>Ingredients:</strong> {food.ingredients}<br />
                 </div>
               ))}
