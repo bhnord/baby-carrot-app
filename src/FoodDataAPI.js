@@ -98,8 +98,9 @@ function FoodDataAPI() {
       {submitted && Object.keys(openResults).length > 0 && (
         <div>
           <h2>Open Food Facts Data</h2>
-          <h3>EcoScore: {ecoscore}/100</h3>
-          <h3>Estimated CO2 Emission</h3>
+          <h3>EcoScore: </h3> 
+          <h2 style = {{color: ecoscore > 85 ?'green' : ecoscore > 50 ? '#e3c905': 'red'}}>{ecoscore} / 100</h2>
+          <h3><u>Estimated CO2 Emission</u></h3>
 
           <strong>CO2 from Agriculture: </strong> {openResults.co2_agriculture} kg <br></br>
           <strong>CO2 from Consumption: </strong> {openResults.co2_consumption} kg <br></br>
