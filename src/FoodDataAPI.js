@@ -55,6 +55,7 @@ function FoodDataAPI() {
 
   const ecoscore = openResults.score;
 
+
   return (
     <div className="foodDataAPI">
       <h2>Product Search</h2>
@@ -95,12 +96,12 @@ function FoodDataAPI() {
         </div>
       )}
 
-      {submitted && Object.keys(openResults).length > 0 && (
+      {submitted && Object.keys(openResults).length >0 && ((ecoscore != null &&(
+        
         <div>
           <h2>Open Food Facts Data</h2>
-          <h3>EcoScore: </h3> 
-          <h2 style = {{color: ecoscore > 85 ?'green' : ecoscore > 50 ? '#e3c905': 'red'}}>{ecoscore} / 100</h2>
-          <h3><u>Estimated CO2 Emission</u></h3>
+          <h3>EcoScore: {ecoscore}/100</h3>
+          <h3>Estimated CO2 Emission</h3>
 
           <strong>CO2 from Agriculture: </strong> {openResults.co2_agriculture} kg <br></br>
           <strong>CO2 from Consumption: </strong> {openResults.co2_consumption} kg <br></br>
@@ -110,11 +111,10 @@ function FoodDataAPI() {
           <strong>CO2 from Transportation: </strong> {openResults.co2_transportation} kg <br></br>
           <strong>CO2 Total: </strong> {openResults.co2_total} kg <br></br>
 
-          {/* const listItems = openResults.map((number) =>
-  <li>{number}</li>
-); */}
         </div>
-      )}
+      )) || (
+          <h3>There is no Open Food Facts data for this product</h3>
+      ))}
     </div>
   );
 
