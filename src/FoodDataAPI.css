@@ -54,3 +54,8 @@ button {
 button:hover{
     background-color: rgb(24, 107, 161);
 }
+
+.food:hover {
+    background-color: rgb(219, 219, 219);
+
+}
