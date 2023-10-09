@@ -112,9 +112,9 @@ function FoodDataAPI() {
           <strong>CO2 Total: </strong> {openResults.co2_total} kg <br></br>
 
         </div>
-      )) || (
+      )) || (!isNaN(searchTerm) &&(
           <h3>There is no Open Food Facts data for this product</h3>
-      ))}
+      )))}
     </div>
   );
 
