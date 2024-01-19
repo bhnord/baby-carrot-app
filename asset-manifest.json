@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.70a8c0f7.css",
+    "main.js": "/static/js/main.b7e43f4b.js",
+    "static/js/787.7e91f849.chunk.js": "/static/js/787.7e91f849.chunk.js",
+    "static/media/baby_carrot_logo.png": "/static/media/baby_carrot_logo.ae902dd8658193ef1671.png",
+    "index.html": "/index.html",
+    "main.70a8c0f7.css.map": "/static/css/main.70a8c0f7.css.map",
+    "main.b7e43f4b.js.map": "/static/js/main.b7e43f4b.js.map",
+    "787.7e91f849.chunk.js.map": "/static/js/787.7e91f849.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70a8c0f7.css",
+    "static/js/main.b7e43f4b.js"
+  ]
+}
